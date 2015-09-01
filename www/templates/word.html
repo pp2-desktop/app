@@ -1,8 +1,12 @@
 <ion-view view-title="모두의단어">
-  <ion-content>
+  <ion-content padding="true" overflow-scroll="true">
 
     <div ng-repeat="word in word_container">
-      <h1>{{word}}</h1>
+      <div class="card">
+      <div class="item item-text-wrap">
+	This is a basic Card which contains an item that has wrapping text.
+      </div>
+    </div>
     </div>
 
   </ion-content>
