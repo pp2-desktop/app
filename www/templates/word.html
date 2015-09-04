@@ -1,13 +1,72 @@
-<ion-view view-title="모두의단어">
+<ion-view view-title="모두의단어" style="background-color:#E8E8E8;">
   <ion-content padding="true" overflow-scroll="true">
 
-    <div ng-repeat="word in word_container">
-      <div class="card">
-      <div class="item item-text-wrap">
-	This is a basic Card which contains an item that has wrapping text.
-      </div>
-    </div>
-    </div>
+    <ion-list ng-repeat="element in home_container">
+
+      <ion-item  style="border: 2px solid gray; padding:0px; margin-bottom: 0px">
+	<a class="item" href="" style="text-decoration: none; padding: 0px;border-width:0px">
+	  <p align="center" style="font-weight:bold; border-bottom: 2px solid gray;"><span style="color:blue">8월 24일 (금)</span></p>
+	</a>
+
+	<!--
+	<div style="margin-bottom:15px"> </div>
+	-->
+	<div style="clear: both;">
+	  <span ng-repeat='v in element.video_container' class="v-list" ng-click="do_word()">
+
+	    <div class="v">
+	      <div class="row" style="margin: 0px; padding: 0px">
+
+		<span>
+		  <div class="module">
+		    <img max-width:100%; min-height:100px; ng-src="http://img.youtube.com/vi/{{v.vid}}/1.jpg">
+		    <!--
+		    <img max-width:100%; min-height:100px; src="http://img.youtube.com/vi/kUGQ7Tz4os0/1.jpg">
+		    -->
+		    <span class="p2">{{v.length}}</span>
+		    <div ng-if="v.is_view == true">
+		      <span class="p3">시청함</span>
+		    </div>
+		  </div>
+		</span>
+
+
+		<div class="col" style="margin: 0px; padding: 0px; line-height: 15px;">
+		  <div class="row" style="margin-bottom: 5px;">
+		    <p  style="font-size: 70%; color: black; font-weight: bold;">
+		      <span style="white-space: normal;">
+			{{ v.title | limitTo: 70 }} {{v.title.length > 70 ? '...' : ''}}
+		      </span>
+		    </p>
+		  </div>
+
+
+		  <div class="row" style="font-size: 75%; margin-bottom: 5px;">
+		    게시자: {{v.author}}
+		  </div>
+		  <div class="row" style="font-size: 70%;">
+		    조회수: {{v.view | number : 0}}
+		  </div>
+		  <div class="row" style="font-size: 75%;">
+		    <span am-time-ago="v.date"></span>
+		  </div>
+		</div>
+
+	      </div>
+	    </div>
+		
+
+	  </span>
+
+
+	  
+	  
+	</div>
+
+      </ion-item>
+
+      <br>
+    </ion-list>
 
   </ion-content>
 </ion-view>
