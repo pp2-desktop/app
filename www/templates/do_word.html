@@ -1,0 +1,38 @@
+<ion-view view-title="8월 25일 동영상 학습" style="background-color:#E8E8E8;">
+  <ion-content padding="false" overflow-scroll="false">
+
+   
+
+	  <div class="card" style="margin-top: 0px; margin-bottom: 0px; margin-left:0px; margin-right:0px;">
+	    <div class="item item-divider">
+	      <p  style="font-size: 75%; color: black; font-weight: bolder;">
+		{{title}}
+	      </p>
+	    </div>
+
+	    <div class="item item-text-wrap;" style="border-width:0px; padding:0px; background-color:black ">	     
+	      <div ng-if="is_v == true">
+		<youtube-video video-id="vid" player-vars="opts" player-width="'100%'" player-height="'100%'"></youtube-video>
+	      </div>
+	    </div>
+
+	    <div style="min-height: 40px; max-height: 40px;">
+	      <div ng-repeat="dialog in dialogs">
+		<p style="font-size:90%; color:black; font-weight:bolder; text-align:center; margin:0px" align="center">{{dialog}} </p>
+	      </div>
+	    </div>
+
+	    <hr>
+	    <p>
+	      aaa
+	    </p>
+	    
+
+	  </div>
+
+
+
+
+  </ion-content>
+</ion-view>
+
