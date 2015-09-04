@@ -12,20 +12,32 @@
 
 	    <div class="item item-text-wrap;" style="border-width:0px; padding:0px; background-color:black ">	     
 	      <div ng-if="is_v == true">
+
+		<div id="footer2">
+		  <div ng-repeat="dialog in dialogs">
+		    <p style="font-size:65%; color:white; font-weight:bolder;">{{dialog}} </p>
+		  </div>
+		</div>
 		<youtube-video video-id="vid" player-vars="opts" player-width="'100%'" player-height="'100%'"></youtube-video>
 	      </div>
 	    </div>
 
+	    <!--
 	    <div style="min-height: 40px; max-height: 40px;">
 	      <div ng-repeat="dialog in dialogs">
 		<p style="font-size:90%; color:black; font-weight:bolder; text-align:center; margin:0px" align="center">{{dialog}} </p>
 	      </div>
 	    </div>
+	    -->
 
-	    <hr>
-	    <p>
-	      aaa
-	    </p>
+	  
+	    <button ng-click="change_sub(1)">
+	      en
+	    </button>
+
+	    <button ng-click="change_sub(2)">
+	      ko
+	    </button>
 	    
 
 	  </div>

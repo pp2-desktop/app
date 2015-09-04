@@ -166,3 +166,40 @@
   font: 11px Sans-Serif;
   font-weight:bold;
 }
+
+.p2s {
+  position: absolute;
+  bottom: 5px;
+  -left: 135px;
+  left: 35%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 4px 8px;
+  color: white;
+  margin: 0;
+  font: 11px Sans-Serif;
+  font-weight:bold;
+}
+
+.p2p {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 4px 4px;
+  color: white;
+  margin: 0;
+  font: 11px Sans-Serif;
+  font-weight:bold;
+}
+
+#footer2{
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    width:80%;
+    margin: 0 0 0 -40%;
+    left:50%;
+    text-align:center;
+}
+
