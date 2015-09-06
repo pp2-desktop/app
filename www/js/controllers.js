@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPlatform, $rootScope, $ionicHistory) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -39,6 +39,24 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+  $ionicPlatform.ready(function(){
+    $ionicPlatform.onHardwareBackButton(function() {
+      $rootScope.$broadcast('back_btn');
+    });
+  });
+
+
+  $rootScope.myGoBack = function() {
+    $ionicHistory.goBack();
+  };
+      //alert('1');
+    
+    //$rootScope.get_user_info();
+    // 못가져오는 경우가 가끔 있음 분석해야함
+    //$timeout( function(){ $rootScope.get_user_info(); }, 4000);
+
+  
 })
 
 .controller('PlaylistsCtrl', function($scope) {

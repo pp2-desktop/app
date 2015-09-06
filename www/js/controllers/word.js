@@ -4,7 +4,7 @@ angular.module('starter.controllers')
     $scope.word_container = [];
     
     var init = function() {
-      var req_url = 'http://s.05day.com/home/1';
+     var req_url = 'http://s.05day.com/home/1';
       //var req_url = 'http://127.0.0.1:3000/home/1';
       
       $http.get(req_url).
@@ -17,13 +17,14 @@ angular.module('starter.controllers')
 	  alert('[error] word 요청중');
 	});
 
-      
     };
     
     init();
 
-    $scope.do_word = function() {
-      $window.location = "#app/word/12345";
+    $scope.do_qword = function() {
+      $window.location = "#app/qword/12345";
     };
+
+
     
   }]);
